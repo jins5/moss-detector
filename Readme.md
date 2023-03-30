@@ -23,8 +23,10 @@ Bienvenue dans ce dépôt qui facilite l'utilisation de Moss, un détecteur de p
 
 <!-- GETTING STARTED -->
 ## Démarrage
-**AVANT TOUTE CHOSE, VOUS DEVEZ AVOIR PERL D'INSTALLER !.**
+**AVANT TOUTE CHOSE, VOUS DEVEZ AVOIR PERL, PYTHON ET NODE.JS D'INSTALLER !.**
 __Installer Perl__ : <a href="https://www.perl.org/get.html" target="_blank">Perl</a>
+__Installer Node.js__ : <a href="https://nodejs.org/en" target="_blank">Node.js</a>
+__Installer Python__ : <a href="https://www.python.org/" target="_blank">Python</a>
 
 
 Ensuite :
