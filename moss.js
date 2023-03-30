@@ -13,8 +13,16 @@ function listerFichiers(cheminDossier) {
         .filter((fichier) => fs.statSync(path.join(cheminDossier, fichier)).isFile())
         .map((fichier) => path.join(cheminDossier, fichier));
 }
+
+
 const fichiersBase = listerFichiers(cheminDossierBase);
 const fichiersCopi = listerFichiers(cheminDossierCopi);
+
+if (fichiersBase.length == 0 || fichiersCopi.length == 0) {
+    console.error("Aucun fichier trouvé dans le répertoire");
+    return;
+}
+
 const args = ["perl", cheminFichierPerl, "-l", "java", ...fichiersBase, ...fichiersCopi];
 
 const command = args.join(" ");
