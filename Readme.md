@@ -9,7 +9,7 @@ Bienvenue dans ce dépôt qui facilite l'utilisation de Moss, un détecteur de p
 
 
 
-### Prérequis
+### Prerequis
 
 * [![Perl][Perl]][Perl-url]
 * [![Node][Node.js]][Node-url]
@@ -82,7 +82,7 @@ Voir les [issues](https://github.com/jins5/) pour une liste complète des foncti
 
 Distributed under the MIT License. See `Apache` for more information.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#Prerequis">back to top</a>)</p>
 
 
 
