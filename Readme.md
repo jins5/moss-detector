@@ -80,7 +80,7 @@ Voir les [issues](https://github.com/jins5/) pour une liste complète des foncti
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See `Apache` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
