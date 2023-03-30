@@ -24,7 +24,8 @@ Bienvenue dans ce dépôt qui facilite l'utilisation de Moss, un détecteur de p
 <!-- GETTING STARTED -->
 ## Démarrage
 **AVANT TOUTE CHOSE, VOUS DEVEZ AVOIR PERL D'INSTALLER !.**
-__Installer Perl__ : https://www.perl.org/get.html
+__Installer Perl__ : <a href="https://www.perl.org/get.html" target="_blank">Perl</a>
+
 
 Ensuite :
 
