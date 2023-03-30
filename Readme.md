@@ -17,7 +17,7 @@ Bienvenue dans ce dépôt qui facilite l'utilisation de Moss, un détecteur de p
 * [![Python][Python]][Python-url]
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 
@@ -37,7 +37,6 @@ Ensuite :
 
 
 
-<br>
 <br>
 
 ### Installation
