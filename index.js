@@ -1,14 +1,31 @@
+
+
+const { exec } = require("child_process");
+const fs = require("fs");
+const path = require("path");
+
 function recupererlestexte() {
-    
-    const fs = require('fs');
 
-    const code1 = document.getElementById("code1").value;
-    const code2 = document.getElementById("code2").value;
-    
+  let code1Value = document.getElementById("code1").value;
+  let code2Value = document.getElementById("code2").value;
 
-    fs.writeFile('code1.txt', code1, function (err) {
-        if (err) throw err;
-        console.log('Saved!');
-      }
-    );
+  fs.writeFileSync("repo_base/fichier1.txt", code1Value);
+  fs.writeFileSync("repo_copi/fichier2.txt", code2Value);
+
+  const args = ["perl", cheminFichierPerl, "-l", "java", ...fichiersBase, ...fichiersCopi];
+  const command = args.join(" ");
+
+  exec(command, (error, stdout, stderr) => {
+    console.log(command)
+    if (error) {
+      console.error(`Erreur d'exécution : ${error}`);
+      return;
+    }
+    if (stderr) {
+      console.error(`Erreur standard : ${stderr}`);
+      return;
+    }
+
+    console.log(`Sortie standard : ${stdout}`);
+  });
 }
