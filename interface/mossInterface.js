@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-const port = 3000 || process.env.PORT;
+const port = process.env.PORT || 3000;
 const { exec } = require("child_process");
 const fs = require("fs");
 const fsPromises = require("fs").promises;
@@ -11,9 +11,8 @@ app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "interface.html");
+    res.sendFile(path.join(__dirname, "interface", "interface.html"));
 });
-
 app.listen(port, () => {
     console.log(`Serveur démarré sur le port ${port}`);
 });
