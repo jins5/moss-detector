@@ -52,9 +52,9 @@ Pour installer les dépendances, il suffit de lancer la commande suivante :
 node moss.js
   ```
 
+<br><br>
 
-
-## Example
+### Exemples: 
 
 
 <img src= "docs/example_1.jpg">
@@ -63,7 +63,8 @@ Cliquer sur le lien pour voir le rapport. <br><br>
 <img src= "docs/example_2.jpg">
 
 
-# Interface
+<br><br>
+# Interface (optionnel) :
 
 
   
@@ -89,7 +90,7 @@ Voir les [issues](https://github.com/jins5/) pour une liste complète des foncti
 
 
 
-
+<br><br>
 <!-- LICENSE -->
 ## License
 
