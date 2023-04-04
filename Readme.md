@@ -63,12 +63,23 @@ Cliquer sur le lien pour voir le rapport. <br><br>
 <img src= "docs/example_2.jpg">
 
 
-<!-- ROADMAP -->
-## Roadmap
+# Interface
 
-- [ ] Ajoutez des commandes customs
-- [ ] Ajoutez plusieurs langages
 
+  
+  
+<img src= "docs/interface.jpg" width="80%">
+
+<br><br>
+Pour lancer l'interface, il suffit de lancer la commande suivante :
+```sh
+  node mossInterface.js
+  ```
+Et de se rendre sur l'adresse suivante : http://localhost:3000/ <br><br>
+
+Ou de se rendre sur l'adresse suivante : income <br><br>
+
+## Issues
 
 Voir les [issues](https://github.com/jins5/) pour une liste complète des fonctionnalités proposées (et des problèmes connus).
 

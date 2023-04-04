@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    body {
+      overflow: hidden;
+    }
+
     .container {
       display: flex;
       justify-content: center;
@@ -52,36 +56,113 @@
       border-radius: 5px;
       cursor: pointer;
     }
+
+    #title {
+      text-align: center;
+      font-size: 24px;
+      font-family: sans-serif;
+      margin-top: 20px;
+      margin-bottom: -20px;
+      background: linear-gradient(to right, #3ae2d1, #EE82EE);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   </style>
 </head>
 
 <body>
-  <form action="/compare" method="post">
+  <form>
+    <h1 id="title">Moss-Detector v2</h1>
     <div class="container">
 
       <div class="input-container">
         <textarea class="input-field" id="code1" name="code1" placeholder="Code source 1"></textarea>
         <textarea class="input-field" id="code2" name="code2" placeholder="Code source 2"></textarea>
-        <button class="btn" onclick="return validateForm()" type="submit">Lancer la comparaison</button>
+        <select id="language" class="language-select">
+          <option value="java">Java</option>
+          <option value="c">C</option>
+          <option value="cpp">C++</option>
+          <option value="csharp">C#</option>
+          <option value="python">Python</option>
+          <option value="vb">Visual Basic</option>
+          <option value="javascript">Javascript</option>
+          <option value="fortran">FORTRAN</option>
+          <option value="ml">ML</option>
+          <option value="haskell">Haskell</option>
+          <option value="lisp">Lisp</option>
+          <option value="scheme">Scheme</option>
+          <option value="pascal">Pascal</option>
+          <option value="modula2">Modula2</option>
+          <option value="ada">Ada</option>
+          <option value="perl">Perl</option>
+          <option value="tcl">TCL</option>
+          <option value="matlab">Matlab</option>
+          <option value="vhdl">VHDL</option>
+          <option value="verilog">Verilog</option>
+          <option value="spice">Spice</option>
+          <option value="mips">MIPS assembly</option>
+          <option value="a8086">a8086 assembly</option>
+          <option value="hcl2">HCL2</option>
+        </select>
+        <button class="btn" onclick="return validateForm()" type="button">Lancer la comparaison</button>
       </div>
       <div class="input-container">
-        <textarea class="output-field" placeholder="Resultat de la comparaison"></textarea>
+        <textarea class="output-field" id="output" placeholder="Résultat de la comparaison" readonly></textarea>
       </div>
     </div>
   </form>
 
   <script>
-    function validateForm() {
-      let code1Value = document.getElementById("code1").value;
+    function combineCodeAndLanguage() {
+      const code1Value = document.getElementById("code1").value;
+      const languageValue = document.getElementById("language").value;
+      return `@LANGUAGE:${languageValue}@${code1Value}`;
+    }
+
+    async function validateForm() {
+      let code1Value = combineCodeAndLanguage(); // Modifiez cette ligne
       let code2Value = document.getElementById("code2").value;
+      let outputField = document.getElementById("output");
 
       if (code1Value === "" || code2Value === "") {
         alert("Les champs ne peuvent pas être vides");
         return false;
       }
 
-      return true;
+      // Conserve le contenu actuel du champ de sortie
+      let previousOutput = outputField.value;
+
+      // Affiche "LOADING..." dans le champ de sortie
+      outputField.value = "LOADING...";
+
+      // Envoi des données avec AJAX
+      try {
+        const response = await fetch("/compare", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          body: `code1=${encodeURIComponent(code1Value)}&code2=${encodeURIComponent(code2Value)}`
+        });
+
+        if (!response.ok) {
+          throw new Error(`Erreur HTTP: ${response.status}`);
+        }
+
+        const result = await response.text();
+        // Ajoutez une ligne de séparation si nécessaire
+        const separator = "\n----------------------------------------\n";
+        // Concaténez le résultat avec le contenu précédent
+        outputField.value = previousOutput + separator + result;
+      } catch (err) {
+        console.error("Erreur lors de l'envoi des données:", err);
+        // Restaure le contenu précédent en cas d'erreur
+        outputField.value = previousOutput;
+      }
+
+      return false;
     }
+
   </script>
 </body>
 
