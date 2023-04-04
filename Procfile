@@ -1,1 +1,1 @@
-web: node interface/mossInterface.js
+web: node mossInterface.js

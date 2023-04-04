@@ -74,7 +74,7 @@ Cliquer sur le lien pour voir le rapport. <br><br>
 <br><br>
 Pour lancer l'interface, il suffit de lancer la commande suivante :
 ```sh
-  node interface/mossInterface.js
+  node mossInterface.js
   ```
 Et de se rendre sur l'adresse suivante : http://localhost:3000/ <br><br>
 
