@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-const port = 3000;
+const port = 3000 || process.env.PORT;
 const { exec } = require("child_process");
 const fs = require("fs");
 const fsPromises = require("fs").promises;
