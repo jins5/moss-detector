@@ -3,5 +3,25 @@
     "express": "^4.18.2",
     "fs": "^0.0.1-security",
     "path": "^0.12.7"
-  }
+  },
+  "name": "moss-detector",
+  "description": "Bienvenue dans ce dépôt qui facilite l'utilisation de Moss, un détecteur de plagiat pour le code source. Avec ce code, vous n'avez plus besoin de vous soucier de la configuration et de l'exécution de Moss. Il vous suffit de déposer vos fichiers de base dans le répertoire repo_base et les fichiers à comparer dans le répertoire repo_copi.",
+  "version": "1.0.0",
+  "main": "/interface/mossInterface.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jins5/moss-detector.git"
+  },
+  "author": "jins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jins5/moss-detector/issues"
+  },
+  "homepage": "https://github.com/jins5/moss-detector#readme"
 }
