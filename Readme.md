@@ -78,7 +78,7 @@ Pour lancer l'interface, il suffit de lancer la commande suivante :
   ```
 Et de se rendre sur l'adresse suivante : http://localhost:3000/ <br><br>
 
-Ou de se rendre sur l'adresse suivante : income <br><br>
+Ou de se rendre sur l'adresse suivante : https://moss-detector.herokuapp.com/ <br><br>
 
 ## Issues
 
