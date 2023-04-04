@@ -74,7 +74,7 @@ Cliquer sur le lien pour voir le rapport. <br><br>
 <br><br>
 Pour lancer l'interface, il suffit de lancer la commande suivante :
 ```sh
-  node mossInterface.js
+  node interface/mossInterface.js
   ```
 Et de se rendre sur l'adresse suivante : http://localhost:3000/ <br><br>
 
@@ -82,8 +82,29 @@ Ou de se rendre sur l'adresse suivante : income <br><br>
 
 ## Issues
 
-Voir les [issues](https://github.com/jins5/) pour une liste complète des fonctionnalités proposées (et des problèmes connus).
+/!\ **ATTENTION** /!\\
+Si vous rencontrez un problème, merci de vérifier que vous avez bien suivi les instructions ci-dessus.
 
+<br>
+
+#### Erreur concernant le fichier ``moss.pl``
+Si le problème persiste, récuperer le fichier ``moss.pl`` chez moss.stanford.edu et le placer dans le contenue dans ``moss.pl``.
+
+Pour ce faire envoyer un mail avec ce contenue à l'adresse suivante (moss@moss.stanford.edu) :
+
+
+``registeruser``
+``mail votreEmail@domain.com``
+
+Seulement ce contenue, pas de message supplémentaire, et pas de Sujet.
+Vous recevrez un mail avec le contenue de ``moss.pl``, il suffit de le copier dans le fichier ``moss.pl``.
+
+<br>
+
+### Sinon :
+
+Voir les [issues](https://github.com/jins5/) pour une liste complète des fonctionnalités proposées (et des problèmes connus).
+Ou de créer une issue pour signaler un problème ou une fonctionnalité.
 
 
 

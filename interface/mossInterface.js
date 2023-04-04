@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/interface/interface.html");
+    res.sendFile(__dirname + "interface.html");
 });
 
 app.listen(port, () => {
