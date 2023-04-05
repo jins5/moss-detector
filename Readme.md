@@ -2,7 +2,7 @@
 
 # Moss Detector
 
-Bienvenue dans ce dépôt qui facilite l'utilisation de Moss, un détecteur de plagiat pour le code source. Avec ce code, vous n'avez plus besoin de vous soucier de la configuration et de l'exécution de Moss. Il vous suffit de déposer vos fichiers de base dans le répertoire repo_base et les fichiers à comparer dans le répertoire repo_copi.
+Bienvenue dans ce dépôt qui facilite l'utilisation de Moss, un détecteur de plagiat pour le code source. Avec ce code, vous n'avez plus besoin de vous soucier de la configuration et de l'exécution de Moss. Il vous suffit de déposer vos fichiers de base dans le répertoire repo_base et les fichiers à comparer dans le répertoire repo_copi ou d'utiliser l'interface !
 
 
 
