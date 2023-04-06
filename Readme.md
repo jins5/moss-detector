@@ -93,7 +93,7 @@ Si le problème persiste, récuperer le fichier ``moss.pl`` chez moss.stanford.e
 Pour ce faire envoyer un mail avec ce contenue à l'adresse suivante (moss@moss.stanford.edu) :
 
 
-``registeruser`` \n
+``registeruser``  
 ``mail votreEmail@domain.com``
 
 Seulement ce contenue, pas de message supplémentaire, et pas de Sujet.
